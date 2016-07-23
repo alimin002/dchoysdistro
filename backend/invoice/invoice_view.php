@@ -77,33 +77,35 @@ while($rows=mysql_fetch_object($result)){
 
 			?>
 			<tr>
-				<td><? echo $posisi+$no
+				<td>
+				<?php echo $posisi+$no
 				?></td>
 			
-				<td><? echo $rows -> nama; ?></td>
-			<td><a href='index.php?mod=invoice&pg=invoice_detail&id=<? echo $rows -> noinvoice; ?>'><? echo $rows -> noinvoice; ?></a></td>
-			<td><? echo $rows -> tanggal; ?></td>
-				<td><? echo format_rupiah($rows ->totalbayar); ?></td>
+				<td><?php echo $rows -> nama; ?></td>
+			<td><a href='index.php?mod=invoice&pg=invoice_detail&id=<?php echo $rows -> noinvoice; ?>'><?php echo $rows -> noinvoice; ?></a></td>
+			<td><?php echo $rows -> tanggal; ?></td>
+				<td><?php echo format_rupiah($rows ->totalbayar); ?></td>
 		
-			<td><? echo get_status_invoice($rows -> transfer); ?></td>
-			<td><? echo tglkirim($rows -> tglkirim); ?>
+			<td><?php echo get_status_invoice($rows -> transfer); ?></td>
+			<td><?php echo tglkirim($rows -> tglkirim); ?>
 				
 				</td>
 			
 				<td>	
 					
-				<a href="index.php?mod=invoice&pg=invoice_view&act=bayar&id=<?= $rows -> noinvoice; ?>"
+				<a href="index.php?mod=invoice&pg=invoice_view&act=bayar&id=<?php echo $rows -> noinvoice; ?>"
 				onclick="return confirm('Tandai sudah bayar?') ";
 				class='btn btn-success'> <i class="icon-ok"></i>Sudah bayar</a>
-				<a href="index.php?mod=invoice&pg=invoice_view&act=kirim&id=<?= $rows -> noinvoice; ?>"
+				<a href="index.php?mod=invoice&pg=invoice_view&act=kirim&id=<?php echo $rows -> noinvoice; ?>"
 				onclick="return confirm('Kirim barang sekarang?') ";
 				class='btn btn-success'> <i class="icon-ok"></i>Kirim barang</a>
-				<a href="index.php?mod=invoice&pg=invoice_view&act=del&id=<?= $rows -> noinvoice; ?>"
+				<a href="index.php?mod=invoice&pg=invoice_view&act=del&id=<?php $rows -> noinvoice; ?>"
 				onclick="return confirm('Yakin data akan dihapus?') ";
 				class='btn btn-danger'> <i class="icon-trash"></i></a>
 				</td>
 			</tr>
-			<? $no++;
+			<?php 
+			$no++;
 				}
 			?>
 
@@ -118,10 +120,10 @@ while($rows=mysql_fetch_object($result)){
 ?>
 <div class='pagination'> 
 	<ul>
-<? pagination($halaman, $jumlah_halaman, "invoice"); ?>
+<?php pagination($halaman, $jumlah_halaman, "invoice"); ?>
 	</ul>
 </div>
-<div class='well'>Jumlah data :<strong><?= $jmldata; ?> </strong></div>
+<div class='well'>Jumlah data :<strong><?php $jmldata; ?> </strong></div>
 <?php
 // KODE UNTUK MENAMPILKAN PESAN STATUS
 if (isset($_GET['status'])) {

@@ -29,7 +29,8 @@
 <?php
 $batas='5';
 $tabel="pelanggan";
-$halaman=$_GET['halaman'];
+
+if(isset($_GET['halaman'])){$halaman=$_GET['halaman'];}
 $posisi=null;
 if(empty($halaman)){
 $posisi=0;
@@ -47,23 +48,27 @@ while($rows=mysql_fetch_object($result)){
 
 			?>
 			<tr>
-				<td><? echo $posisi+$no
-				?></td>
+				<td>
+				<?php
+				echo $posisi+$no;
+				?>
+				</td>
 			
-				<td><?		echo $rows -> nama;?></td>
-			<td><?		echo $rows ->email;?></td>
-			<td><?		echo $rows->telp;?></td>
+				<td><?php echo $rows -> nama;?></td>
+			<td><?php echo $rows ->email;?></td>
+			<td><?php echo $rows->telp;?></td>
 			
 				<td>	
 					
-					<a href="index.php?mod=pelanggan&pg=pelanggan_form&id=<?=	$rows -> idpelanggan;?>"
+					<a href="index.php?mod=pelanggan&pg=pelanggan_form&id=<?php echo $rows -> idpelanggan;?>"
 
-				class='btn btn-warning'> <i class="icon-pencil"></i></a><a href="index.php?mod=pelanggan&pg=pelanggan_view&act=del&id=<?=	$rows -> idpelanggan;?>"
+				class='btn btn-warning'> <i class="icon-pencil"></i></a><a href="index.php?mod=pelanggan&pg=pelanggan_view&act=del&id=<?php echo $rows -> idpelanggan;?>"
 				onclick="return confirm('Yakin data akan dihapus?') ";
 				class='btn btn-danger'> <i class="icon-trash"></i></a></td>
 			</tr>
-			<?	$no++;
-	}?>
+			<?php	$no++;
+	}
+	        ?>
 
 			<tr>
 				<td colspan='4' ></td><td><a href="index.php?mod=pelanggan&pg=pelanggan_form"
@@ -80,12 +85,12 @@ $jumlah_halaman = ceil($jmldata / $batas);
 ?>
 <div class='pagination'> 
 	<ul>
-<?
+<?php
 pagination($halaman, $jumlah_halaman,"pelanggan");
 ?>
 	</ul>
 </div>
-<div class='well'>Jumlah data :<strong><?=$jmldata;?> </strong></div>
+<div class='well'>Jumlah data :<strong><?php echo $jmldata;?> </strong></div>
 <?php
 // KODE UNTUK MENAMPILKAN PESAN STATUS
 if(isset($_GET['status'])) {

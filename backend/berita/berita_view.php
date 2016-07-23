@@ -16,7 +16,8 @@ if(empty($_SESSION['username'])){
 					mysql_query($sql) or die(mysql_error());
 
 				}
-				//==========================================?>
+				//==========================================
+?>
 <div class='bs-docs-example'>
 	<h2 id="headings"> Data berita</h2>
 	<table  class="table table-striped table-condensed">
@@ -28,7 +29,7 @@ if(empty($_SESSION['username'])){
 				//bata paging 
 $batas='10';
 $tabel="berita";
-$halaman=$_GET['halaman'];
+if(isset($_GET['halaman'])){$halaman=$_GET['halaman'];}
 $posisi=null;
 if(empty($halaman)){
 $posisi=0;
@@ -45,15 +46,17 @@ while($rows=mysql_fetch_object($result)){
 
 		?>
 		<tr>
-			<td><? echo $posisi+$no
+			<td>
+			<?php 
+			echo $posisi+$no
 			?></td>
-			<td><?		echo $rows -> judul;?></td>
-			<td><a href="index.php?mod=berita&pg=berita_form&id=<?=	$rows -> idberita;?>" 
-				class='btn btn-warning'><i class="icon-pencil"></i></a><a href="index.php?mod=berita&pg=berita_view&act=del&id=<?=	$rows -> idberita;?>"
+			<td><?php echo $rows -> judul;?></td>
+			<td><a href="index.php?mod=berita&pg=berita_form&id=<?php echo $rows -> idberita;?>" 
+				class='btn btn-warning'><i class="icon-pencil"></i></a><a href="index.php?mod=berita&pg=berita_view&act=del&id=<?php echo $rows -> idberita;?>"
 			onclick="return confirm('Yakin data akan dihapus?') ";
 			class='btn btn-danger'> <i class="icon-trash"></i></a></td>
 		</tr>
-		<?
+		<?php
 	$no++;
 	}?>
 
@@ -79,7 +82,7 @@ mysql_close();
 ?>
 </ul>
 </div>
-<br>Jumlah data :<?=$jmldata;?>
+<br>Jumlah data :<?php echo $jmldata;?>
 	<?php
 // KODE UNTUK MENAMPILKAN PESAN STATUS
 if(isset($_GET['status'])) {

@@ -48,7 +48,7 @@
 <?php
 $batas='10';
 $tabel="stok";
-$halaman=$_GET['halaman'];
+if(isset($_GET['halaman'])){$halaman=$_GET['halaman'];}
 $posisi=null;
 if(empty($halaman)){
 $posisi=0;
@@ -67,23 +67,25 @@ while($rows=mysql_fetch_object($result)){
 
 			?>
 			<tr>
-				<td><? echo $posisi+$no
-				?></td>
+				<td>
+				<?php echo $posisi+$no
+				?>
+				</td>
 			
-				<td><?		echo $rows -> nama_produk;?></td>
-			<td align='right'><?		echo format_rupiah($rows ->harga_beli);?></td>
-			<td align='right'><?		echo format_rupiah($rows ->harga_jual);?></td>
-			<td align='right'><?		echo $rows ->jumlah;?></td>
+				<td><?php echo $rows -> nama_produk;?></td>
+			<td align='right'><?php		echo format_rupiah($rows ->harga_beli);?></td>
+			<td align='right'><?php		echo format_rupiah($rows ->harga_jual);?></td>
+			<td align='right'><?php		echo $rows ->jumlah;?></td>
 			
 				<td>	
 					
-					<a href="index.php?mod=stok&pg=stok_form&id=<?=	$rows -> idstok;?>"
+					<a href="index.php?mod=stok&pg=stok_form&id=<?php echo $rows -> idstok;?>"
 
-				class='btn btn-warning'> <i class="icon-pencil"></i></a><a href="index.php?mod=stok&pg=stok_view&act=del&id=<?=	$rows -> idstok;?>"
+				class='btn btn-warning'> <i class="icon-pencil"></i></a><a href="index.php?mod=stok&pg=stok_view&act=del&id=<?php echo $rows -> idstok;?>"
 				onclick="return confirm('Yakin data akan dihapus?') ";
 				class='btn btn-danger'> <i class="icon-trash"></i></a></td>
 			</tr>
-			<?	$no++;
+			<?php	$no++;
 	}?>
 
 			<tr>
@@ -92,21 +94,20 @@ while($rows=mysql_fetch_object($result)){
 			</tr>
 		</tbody>
 	</table>
-	<?php
+<?php
 //=============CUT HERE for paging====================================
 $tampil2 = mysql_query("SELECT idstok from stok");
-
 $jmldata = mysql_num_rows($tampil2);
 $jumlah_halaman = ceil($jmldata / $batas);
 ?>
 <div class='pagination'> 
 	<ul>
-<?
+<?php
 pagination($halaman, $jumlah_halaman,"stok");
 ?>
 	</ul>
 </div>
-<div class='well'>Jumlah data :<strong><?=$jmldata;?> </strong></div>
+<div class='well'>Jumlah data :<strong><?php echo $jmldata;?> </strong></div>
 <?php
 // KODE UNTUK MENAMPILKAN PESAN STATUS
 if(isset($_GET['status'])) {
@@ -116,7 +117,7 @@ if(isset($_GET['status'])) {
 		echo "operasi gagal";
 	}
 }
-
-//close database?>
+//close database
+?>
 
 </div>

@@ -17,7 +17,7 @@ include('../inc/header-back.php');
 					<a href="#" class="brand">
 						<small>
 							<i class="icon-desktop"></i>
-						Candralab  eCommerce Dashboard
+						D'choys distro & clothes Dashboard
 						</small>
 					</a><!--/.brand-->
 

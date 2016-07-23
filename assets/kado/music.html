@@ -7,6 +7,7 @@
 <style>
 html,body{
   height:100%
+ 
 }
 
 .bg_heart {
@@ -15,7 +16,8 @@ html,body{
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden
+	background-image: url('myVenus1.jpg');
+    overflow: hidden;
  }
 
 .heart {
@@ -26,7 +28,9 @@ html,body{
     -m-transform: rotate(-45deg);
     transform: rotate(-45deg)
  }
-
+.image{
+background-image: url('myVenus.jpg');
+}
 .heart:before {
     position: absolute;
     top: -50%;
@@ -49,6 +53,7 @@ html,body{
     height: 100%;
     background: inherit;
     border-radius: 100%;
+	background-image: url(myVenus.jpg);
 }
 
 @-webkit-keyframes love {
@@ -123,10 +128,8 @@ var love = setInterval(function() {
     var r_bg = Math.floor(Math.random() * 25) + 100;
     var r_time = Math.floor(Math.random() * 5) + 5;
 
-    $('.bg_heart').append("<div class='heart' style='width:" + r_size + "px;height:" + r_size + "px;left:" + r_left + "%;background:rgba(255," + (r_bg - 25) + "," + r_bg + ",1);-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + r_time + "s ease;animation:love " + r_time + "s ease'></div>");
-
+    $('.bg_heart').append("<div class='heart' width:" + r_size + "px;height:" + r_size + "px;left:" + r_left + "%;background:rgba(255," + (r_bg - 25) + "," + r_bg + ",1);-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + r_time + "s ease;animation:love " + r_time + "s ease'></div>");
     $('.bg_heart').append("<div class='heart' style='width:" + (r_size - 10) + "px;height:" + (r_size - 10) + "px;left:" + (r_left + r_num) + "%;background:rgba(255," + (r_bg - 25) + "," + (r_bg + 25) + ",1);-webkit-animation:love " + (r_time + 5) + "s ease;-moz-animation:love " + (r_time + 5) + "s ease;-ms-animation:love " + (r_time + 5) + "s ease;animation:love " + (r_time + 5) + "s ease'></div>");
-
     $('.heart').each(function() {
         var top = $(this).css("top").replace(/[^-\d\.]/g, '');
         var width = $(this).css("width").replace(/[^-\d\.]/g, '');
@@ -135,5 +138,15 @@ var love = setInterval(function() {
         }
     });
 }, 500);
+var arrVenus=["myVenus1","myVenus2"];
+var showVenus = setInterval(function() {
+   
+}, 2000);
+
+changeSize(400,400);
+function changeSize( w, h){    
+    window.resizeTo(w,h);
+}
+
 </script>
 </html>

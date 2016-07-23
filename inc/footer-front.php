@@ -34,6 +34,7 @@ kecil yang bergerak dalam bidang penjualan produk berupa pakaian dengan berbagai
 		<script src="assets/themes-front/js/common.js"></script>
 		<script src="assets/themes-front/js/jquery.flexslider-min.js"></script>
 		<script type="text/javascript">
+		openRequestedPopup();
 			$(function() {
 				$(document).ready(function() {
 					$('.flexslider').flexslider({
@@ -46,6 +47,19 @@ kecil yang bergerak dalam bidang penjualan produk berupa pakaian dengan berbagai
 					});
 				});
 			});
+			var windowObjectReference;
+
+function openRequestedPopup() {
+	var http = location.protocol;
+    var slashes = http.concat("//");
+    var host = slashes.concat(window.location.hostname);
+	host=host+"/dchoysdistro/"+"assets/"+"kado"+"/music.html";
+    windowObjectReference = window.open(
+    host,
+    "music spesial untuk yang jauh disana",
+    "resizable,scrollbars,status"
+  );
+}
 		</script>
     </body>
 </html>

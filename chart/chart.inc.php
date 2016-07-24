@@ -29,6 +29,7 @@ function kd_transaksi() {
 }
 
 function writeShoppingchart() {
+	error_reporting(0);
 	$chart = $_SESSION['chart'];
 	if (!$chart) {
 		return '<p>Anda belum membeli apapun</p>';

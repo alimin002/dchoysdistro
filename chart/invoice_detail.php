@@ -5,6 +5,7 @@
  * last edit: 15 okt 2013
  */
 cek_status_login($_SESSION['idpelanggan']);
+error_reporting(0);
 ?>
 
 

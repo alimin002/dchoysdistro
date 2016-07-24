@@ -79,8 +79,8 @@ $greeting="Baju keren kualitas oke disini tempatnya.";
 		<div id="wrapper" class="container">
 			<section class="navbar main-menu">
 				<div class="navbar-inner main-menu">				
-					<a href="index.php" class="logo pull-left"><img src="assets/themes-front/images/logo.png" class="site_logo" alt=""><?php echo $company_name; ?></a>
-					<!-- menu kategori -->
+					<a style="font-family:monotype corsiva; font-weight:bold;" href="index.php" class="logo pull-left"><img src="assets/themes-front/images/logo.png" class="site_logo" alt=""><?php echo $company_name; ?></a>
+					<!-- menu kategori --> 
 					<nav id="menu" class="pull-right">
 						<ul>
 							<?php

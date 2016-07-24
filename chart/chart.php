@@ -8,10 +8,14 @@
 if(!isset($_SESSION)) 
    { 
         session_start(); 
-   } 
+   }
+error_reporting(0);   
 cek_status_login($_SESSION['idpelanggan']);
 include ('chart.inc.php');
+if(isset($_SESSION['chart'])){
 	$chart = $_SESSION['chart'];
+	}
+	
 if(isset($_GET['action'])){
 $action = $_GET['action'];
 }else{
@@ -71,12 +75,13 @@ switch ($action) {
 				}
 			}
 		}
-
-		$chart = $newchart;
+        if(isset($chart)){$chart = $newchart;}
+		
 		break;
 }
 //echo $chart;
-$_SESSION['chart'] = $chart;
+if(isset($chart)){$_SESSION['chart'] = $chart;}
+
 ?>
 
 <section class="main-content">

@@ -99,7 +99,7 @@ while($rows=mysql_fetch_object($result)){
 				<a href="index.php?mod=invoice&pg=invoice_view&act=kirim&id=<?php echo $rows -> noinvoice; ?>"
 				onclick="return confirm('Kirim barang sekarang?') ";
 				class='btn btn-success'> <i class="icon-ok"></i>Kirim barang</a>
-				<a href="index.php?mod=invoice&pg=invoice_view&act=del&id=<?php $rows -> noinvoice; ?>"
+				<a href="index.php?mod=invoice&pg=invoice_view&act=del&id=<?php echo $rows -> noinvoice; ?>"
 				onclick="return confirm('Yakin data akan dihapus?') ";
 				class='btn btn-danger'> <i class="icon-trash"></i></a>
 				</td>

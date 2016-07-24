@@ -31,7 +31,7 @@
 <form  class="form-horizontal" method="POST" id="form1"  enctype="multipart/form-data"
 action="stok/stok_action.php">
 	
-		<?php $id = $_GET['id'];?>
+		<?php if(isset($id)){$id = $_GET['id'];}?>
 		<input type='hidden' name='id' value="<?php echo $id;?>">
 
 	<div class="control-group">
@@ -50,28 +50,28 @@ action="stok/stok_action.php">
 		<div class="control-group">
 			<label class="control-label" for="lon">Harga beli</label>
 			<div class="controls">
-				<input type="text" name='harga_beli' id='harga_beli' value='<?php echo $data->harga_beli?>' class='required'
+				<input type="text" name='harga_beli' id='harga_beli' value='<?php if(isset($data->harga_beli)){echo $data->harga_beli;} ?>' class='required'
 				>
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="lon">Harga Jual</label>
 			<div class="controls">
-				<input type="text" name='harga_jual' id='harga_jual' value='<?php echo $data->harga_jual?>' class='required'
+				<input type="text" name='harga_jual' id='harga_jual' value='<?php if(isset($data->harga_jual)){echo $data->harga_jual;} ?>' class='required'
 				>
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="lon">jumlah</label>
 			<div class="controls">
-				<input type="text" name='jumlah' id='jumlah' value='<?php $data->jumlah?>' class='required'>
+				<input type="text" name='jumlah' id='jumlah' value='<?php if(isset($data->jumlah)){echo $data->jumlah;}?>' class='required'>
 			</div>
 		</div>
 		
 
 		<div class="control-group">
 			<div class="controls">
-				<button type="submit" class="btn btn-success" name='aksi'value='<?=$aksi?>'>
+				<button type="submit" class="btn btn-success" name='aksi'value='<?php echo $aksi?>'>
 				<?php echo $aksi;?>
 				</button>
 			</div>

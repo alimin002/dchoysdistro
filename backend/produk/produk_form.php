@@ -31,12 +31,12 @@ if(empty($_SESSION['username'])){
 <form  class="form-horizontal" method="POST" id="form1"  enctype="multipart/form-data"
 action="produk/produk_action.php">
 	
-		<?php		$id = $_GET['id'];?>
-		<input type='hidden' name='id' value="<?=$id?>">
+		<?php if(isset($id)){$id = $_GET['id'];} ?>
+		<input type='hidden' name='id' value="<?php echo $id?>">
 	<div class="control-group">
 			<label class="control-label" for="nama_produk">Nama Produk</label>
 			<div class="controls">
-				<input type="text" name='nama_produk' value='<?=$data->nama_produk?>'class='required'
+				<input type="text" name='nama_produk' value='<?php if(isset($data->nama_produk)){echo $data->nama_produk;}  ?>'class='required'
 				>
 			</div>
 		</div>
@@ -44,8 +44,7 @@ action="produk/produk_action.php">
 			<label class="control-label" for="idkategori">kategori</label>
 			<div class="controls">
 				<select id='idkategori' name='idkategori' class="required " >
-						<?php
-   
+	<?php
     combo_kategori($data->idkategori);
    	?>
 				</select>
@@ -64,14 +63,14 @@ action="produk/produk_action.php">
 			<label class="control-label" for="deskripsi">deskripsi</label>
 			<div class="controls">
 				<textarea name='deskripsi' class="input-xxlarge">
-					<? echo trim($data->deskripsi)?>
+					<?php if(isset($data->deskripsi)){echo trim($data->deskripsi);} ?>
 				</textarea>
 			</div>
 		</div>
 
 		<div class="control-group">
 			<div class="controls">
-				<button type="submit" class="btn btn-success" name='aksi'value='<?=$aksi?>'>
+				<button type="submit" class="btn btn-success" name='aksi'value='<?php echo $aksi?>'>
 				<?=$aksi?>
 				</button>
 			</div>

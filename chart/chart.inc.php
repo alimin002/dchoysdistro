@@ -65,9 +65,8 @@ function getQty() {
 }
 
 function showchart() {
-
 	$chart = $_SESSION['chart'];
-//	print_r($chart);
+     //print_r($chart);
 	if ($chart) {
 		$items = explode(',', $chart);
 		$contents = array();
@@ -90,11 +89,11 @@ function showchart() {
 			'</td><td>' . format_rupiah($row -> harga_jual) . '</td>';
 			$output[] = '<td><input type="text" class="input-mini" name="qty' . $id . '" value="' . $qty . '"  /></td>';
 			$output[] = '<td>Rp.' . format_rupiah($row -> harga_jual * $qty) . '</td>';
-				//$total=0;
+			//$total=0;
 			//$total += $row -> harga_jual * $qty;
 			$total = $total + $row -> harga_jual * $qty;
 			//}
-			echo "<h1>". $total."</h1><br/>";
+			//echo "<h1>". $total."</h1><br/>";
 			$output[] = '<td><a href="index.php?mod=chart&pg=chart&action=delete&id=' . $id . '" class="btn btn-danger">Hapus</a></td></tr>';
 			$no++;
 		}

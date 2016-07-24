@@ -11,14 +11,7 @@ if(!isset($_SESSION))
    } 
 cek_status_login($_SESSION['idpelanggan']);
 include ('chart.inc.php');
-// Process actions
-if(isset($chart)){
 	$chart = $_SESSION['chart'];
-}else{
-	$chart = array();
-}
-
-
 if(isset($_GET['action'])){
 $action = $_GET['action'];
 }else{
@@ -84,7 +77,6 @@ switch ($action) {
 }
 //echo $chart;
 $_SESSION['chart'] = $chart;
-//echo $_SESSION['chart'];
 ?>
 
 <section class="main-content">

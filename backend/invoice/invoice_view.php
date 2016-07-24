@@ -11,7 +11,7 @@ if(empty($_SESSION['username'])){
 ?>
 <?php 
 //===========CODE DELETE RECORD ================
-
+error_reporting(0);
 if (isset($_GET['act'])) {
 	$act=$_GET['act'];
 	if($act=='del'){

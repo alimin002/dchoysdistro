@@ -18,6 +18,7 @@
 		</thead>
 		<tbody>
 <?php
+error_reporting(0);
 $batas='10';
 $tabel="pelanggan";
 $halaman=$_GET['halaman'];
@@ -38,16 +39,16 @@ while($rows=mysql_fetch_object($result)){
 
 			?>
 			<tr>
-				<td><? echo $posisi+$no
+				<td><?php echo $posisi+$no
 				?></td>
 			
-				<td><?		echo $rows -> nama;?></td>
-			<td><?		echo $rows ->email;?></td>
-			<td><?		echo $rows->telp;?></td>
+				<td><?php echo $rows -> nama;?></td>
+			<td><?php echo $rows ->email;?></td>
+			<td><?php echo $rows->telp;?></td>
 			
 			
 			</tr>
-			<?	$no++;
+			<?php	$no++;
 	}?>
 
 		</tbody>

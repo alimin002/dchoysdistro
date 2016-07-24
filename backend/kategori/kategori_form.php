@@ -28,20 +28,20 @@ enctype="multipart/form-data" action="kategori/kategori_action.php">
 	<legend>
 		kategori
 	</legend>
-	<input type='hidden' name='id' value="<?=$id?>">
+	<input type='hidden' name='id' value="<?php echo $id;?>">
 	<div class="control-group">
 		<label class="control-label" for="nama">Nama kategori</label>
 		<div class="controls">
 			<input type="text" name='nama_kategori'
-			value=<?=$baris -> nama_kategori;?>
+			value=<?php if(isset($baris -> nama_kategori)){echo  $baris -> nama_kategori;}?>
 			>
 		</div>
 	</div>
 
 	<div class="control-group">
 		<div class="controls">
-			<button type="submit" class="btn btn-success" name='aksi'value=<?=$aksi?>>
-			<?=$aksi
+			<button type="submit" class="btn btn-success" name='aksi'value=<?php echo $aksi?>>
+			<?php echo $aksi
 			?>
 			</button>
 			</div>

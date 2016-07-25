@@ -60,8 +60,7 @@ if(!isset($_GET['pg'])) {
 	if(isset($_SESSION['username'])){
 		include ('produk/produk_view.php');
 	}
-	include ('login/login_form.php
-	');
+	include ('login/login_form.php');
 } else {
 	$pg = $_GET['pg'];
 	$mod = $_GET['mod'];

@@ -8,6 +8,7 @@ $greeting="Baju keren kualitas oke disini tempatnya.";
 	<head>
 		<meta charset="utf-8">
 		<title><?php echo $company_name; ?></title>
+		<link rel="icon" href="assets/themes-front/images/logo.png" class="site_logo" alt="" type="image/png">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
@@ -88,7 +89,7 @@ $greeting="Baju keren kualitas oke disini tempatnya.";
     src: url(assets/themes-front/font/Zeyada.ttf);
 }
 </style>				
-					<a style="font-family:zeyadaFont; font-weight:bold;" href="index.php" class="logo pull-left"><img src="assets/themes-front/images/logo.png" class="site_logo" alt=""><?php echo $company_name; ?></a>
+					<a style="font-family:zeyadaFont; font-weight:bold; font-size:15pt;"  href="index.php" class="logo pull-left"><img src="assets/themes-front/images/logo.png" class="site_logo" alt=""><?php echo $company_name; ?></a>
 					<!-- menu kategori --> 
 					<nav id="menu" class="pull-right">
 						<ul>

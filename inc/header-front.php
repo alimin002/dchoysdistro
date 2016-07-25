@@ -34,6 +34,7 @@ $greeting="Baju keren kualitas oke disini tempatnya.";
 		<script src="assets/bootstrap/js/messages_id.js"></script>
 		<!--library pribadi geekinova -->
 		<script src="assets/themes-front/js/geekInova.js"></script>
+		<!--<script src="assets/themes-front/font/Zeyada.ttf"></script>-->
 		<script>
 			$(document).ready(function() {
 				$("#form1").validate();
@@ -80,8 +81,14 @@ $greeting="Baju keren kualitas oke disini tempatnya.";
 		</div>
 		<div id="wrapper" class="container">
 			<section class="navbar main-menu">
-				<div class="navbar-inner main-menu">				
-					<a style="font-family:monotype corsiva; font-weight:bold;" href="index.php" class="logo pull-left"><img src="assets/themes-front/images/logo.png" class="site_logo" alt=""><?php echo $company_name; ?></a>
+				<div class="navbar-inner main-menu">
+<style>
+@font-face {
+    font-family: zeyadaFont;
+    src: url(assets/themes-front/font/Zeyada.ttf);
+}
+</style>				
+					<a style="font-family:zeyadaFont; font-weight:bold;" href="index.php" class="logo pull-left"><img src="assets/themes-front/images/logo.png" class="site_logo" alt=""><?php echo $company_name; ?></a>
 					<!-- menu kategori --> 
 					<nav id="menu" class="pull-right">
 						<ul>

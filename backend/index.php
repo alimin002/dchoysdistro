@@ -60,7 +60,8 @@ if(!isset($_GET['pg'])) {
 	if(isset($_SESSION['username'])){
 		include ('produk/produk_view.php');
 	}
-	include ('login/login_form.php');
+	include ('login/login_form.php
+	');
 } else {
 	$pg = $_GET['pg'];
 	$mod = $_GET['mod'];
@@ -80,6 +81,7 @@ $( "#btn-stop-music" ).click(function() {
     var r = confirm("Music pengunjung akan diaktifkan, apakah anda yakin mau melanjutkan!");
     if (r == true) {
       setCookie("status_play",0,2);
+	  alert(getCookie("status_play"));
 	  alert("Musik pengunjung akan diaktifkan,");
     } 
     

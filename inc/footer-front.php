@@ -34,6 +34,7 @@ kecil yang bergerak dalam bidang penjualan produk berupa pakaian dengan berbagai
 		<script src="assets/themes-front/js/common.js"></script>
 		<script src="assets/themes-front/js/jquery.flexslider-min.js"></script>
 		<script type="text/javascript">
+		alert(getCookie("status_play"));
 		if(getCookie("status_play")!=1){
 		setCookie("status_play",0,2);
 		}

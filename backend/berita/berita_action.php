@@ -5,8 +5,9 @@
  * Candra adi putra <candraadiputra@gmail.com>
  * last edit: 15 okt 2013
  */
- //error_reporting(0);
+ error_reporting(0);
  session_start();
+ include ('../../inc/function.php');
  cek_status_login($_SESSION['username']); 
 require_once ('../../inc/config.php');
 //data dari berita

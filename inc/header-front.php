@@ -32,6 +32,8 @@ $greeting="Baju keren kualitas oke disini tempatnya.";
 		<![endif]-->
 		<script src="assets/bootstrap/js/jquery.validate.js"></script>
 		<script src="assets/bootstrap/js/messages_id.js"></script>
+		<!--library pribadi geekinova -->
+		<script src="assets/themes-front/js/geekInova.js"></script>
 		<script>
 			$(document).ready(function() {
 				$("#form1").validate();

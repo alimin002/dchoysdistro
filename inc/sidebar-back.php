@@ -130,7 +130,8 @@
 									<i class="icon-double-angle-right"></i>
 									Pengelola
 								</a>
-							</li>
+						</li>
+						
 							<li>
 								<a href="index.php?mod=login&pg=cp_form">
 									<i class="icon-double-angle-right"></i>
@@ -138,14 +139,18 @@
 								</a>
 							</li>
 							<li>
+							<a>
+								<i id="btn-stop-music" class="icon-double-angle-right"></i>	
+								Stop Music
+							</a>
+								
+						    </li>
+							<li>
 								<a href="login/logout.php">
 									<i class="icon-double-angle-right"></i>
 									Logout
 								</a>
-							</li>
-						
-
-							
+							</li>	
 						</ul>
 					</li>
 				</ul><!--/.nav-list-->
@@ -154,3 +159,6 @@
 					<i class="icon-double-angle-left"></i>
 				</div>
 			
+			<script>
+			$().click
+			</script>

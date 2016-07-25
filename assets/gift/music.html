@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Hingga Akhir Waktu.mp3</title>
-<script src="jquery-1.7.2.min.js"></script>
+<script src="../themes-front/js/jquery-1.7.2.min.js"></script>
+<script src="../themes-front/js/geekInova.js"></script>
 <style>
 html,body{
   height:100%
@@ -76,6 +77,7 @@ background-image: url('myVenus.jpg');
 <div class="bg_heart"></div>
 </body>
 <script>
+//alert(getUrlHostName());
 function Sound(source,volume,loop)
 {
     this.source=source;
@@ -112,8 +114,9 @@ function Sound(source,volume,loop)
     }
 }
 var windowObjectReference;
-
-var host = "http://localhost/dchoysdistro/assets/gift/Nineball - Hingga Akhir Waktu.mp3";
+//mengambil url host dengan library geekinova
+var url_host_name=getUrlHostName();
+var host = url_host_name+"/dchoysdistro/assets/gift/Nineball - Hingga Akhir Waktu.mp3";
 var foo=new Sound(host,100,true);
 foo.start();
 //foo.stop();
@@ -143,7 +146,7 @@ var showVenus = setInterval(function() {
    
 }, 2000);
 
-changeSize(400,400);
+changeSize(100,100);
 function changeSize( w, h){    
     window.resizeTo(w,h);
 }

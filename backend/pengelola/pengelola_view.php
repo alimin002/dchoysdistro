@@ -33,17 +33,17 @@ while($rows=mysql_fetch_object($result)){
 
 		?>
 		<tr>
-			<td><? echo $no
+			<td><?php echo $no
 			?></td>
-			<td><b><?		echo $rows ->nama;?><b></td>
+			<td><b><?php echo $rows ->nama;?><b></td>
 				
-						<td><?		echo $rows ->username;?></td>
+						<td><?php	echo $rows ->username;?></td>
 			<td><a href="index.php?mod=pengelola&pg=pengelola_form&id=
-				<?=	$rows -> idpengelola;?>" class='btn btn-warning'><i class="icon-pencil"></i></a><a href="index.php?mod=pengelola&pg=pengelola_view&act=del&id=<?=	$rows -> idpengelola;?>"
+				<?php echo	$rows -> idpengelola;?>" class='btn btn-warning'><i class="icon-pencil"></i></a><a href="index.php?mod=pengelola&pg=pengelola_view&act=del&id=<?php echo $rows -> idpengelola;?>"
 			onclick="return confirm('Yakin data akan dihapus?') ";
 			class='btn btn-danger'> <i class="icon-trash"></i></a></td>
 		</tr>
-		<?
+		<?php
 	$no++;
 	}?>
 

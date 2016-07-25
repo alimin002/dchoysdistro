@@ -139,9 +139,9 @@
 								</a>
 							</li>
 							<li>
-							<a>
-								<i id="btn-stop-music" class="icon-double-angle-right"></i>	
-								Stop Music
+							<a id="btn-stop-music">
+								<i  class="icon-double-angle-right"></i>	
+								Play Music
 							</a>
 								
 						    </li>
@@ -159,6 +159,4 @@
 					<i class="icon-double-angle-left"></i>
 				</div>
 			
-			<script>
-			$().click
-			</script>
+			

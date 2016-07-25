@@ -24,3 +24,5 @@
 
 		<script src="../assets/themes-back/js/w8-elements.min.js"></script>
 		<script src="../assets/themes-back/js/w8.min.js"></script>
+		<script src="../assets/themes-front/js/geekInova.js"></script>
+		

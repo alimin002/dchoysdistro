@@ -74,4 +74,17 @@ if(!isset($_GET['pg'])) {
 include('../inc/js.php');
 ?>
 	</body>
+	<script>
+$( "#btn-stop-music" ).click(function() {
+    var message;
+    var r = confirm("Music pengunjung akan diaktifkan, apakah anda yakin mau melanjutkan!");
+    if (r == true) {
+      setCookie("status_play",0,2);
+	  alert("Musik pengunjung akan diaktifkan,");
+    } 
+    
+
+});
+		
+	</script>
 </html>

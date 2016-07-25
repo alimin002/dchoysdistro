@@ -1,5 +1,5 @@
 <?php
-	
+	error_reporting(0);
 	/* Candralab Ecommerce v2.0
  * http://www.candra.web.id/
  * Candra adi putra <candraadiputra@gmail.com>

@@ -4,6 +4,7 @@
  * Candra adi putra <candraadiputra@gmail.com>
  * last edit: 15 okt 2013
  */
+ error_reporting(0);
 cek_status_login($_SESSION['username']); 
 	$aksi = null;
 	if(isset($_GET['id'])) {

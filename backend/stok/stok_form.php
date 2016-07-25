@@ -4,6 +4,7 @@
  * Candra adi putra <candraadiputra@gmail.com>
  * last edit: 15 okt 2013
  */
+ error_reporting(0);
  if(empty($_SESSION['username'])){
 			echo "<p style='color:red'>akses denied</p>";
 		exit();		

@@ -31,7 +31,7 @@
 									</div>
 								</div>
 								<div class="control-group">
-									<input tabindex="3" class="btn btn-inverse large" type="submit" value="Sign into your account">
+									<input tabindex="3" class="btn-primary" type="submit" value="Sign into your account">
 									<hr>
 									
 								</div>
@@ -116,8 +116,11 @@
 
 	<div class="control-group">
 		<div class="controls">
-			<button type="submit" class="btn btn-success" name='aksi'value='register'>
+			<button type="submit" class="btn-success" name='aksi'value='register'>
 				Register
+			</button>
+			<button style="background-color:#3B5998;" type="submit" class="btn-primary fa fa-facebook" name='aksi'value='register'>
+				Masuk Dengan Facebook
 			</button>
 		</div>
 	</div>

@@ -119,7 +119,7 @@
 			<button type="submit" class="btn-success" name='aksi'value='register'>
 				Register
 			</button>
-			<button style="background-color:#3B5998;" type="submit" class="btn-primary fa fa-facebook" name='aksi'value='register'>
+			<button id="btn_login_facebook" style="background-color:#3B5998;" type="submit" class="btn-primary fa fa-facebook" name='aksi'value='register'>
 				Masuk Dengan Facebook
 			</button>
 		</div>
@@ -128,4 +128,22 @@
 						</form>					
 					</div>				
 				</div>
-			</section>			
+			</section>
+
+<script>
+$( "#btn_login_facebook" ).click(function() {
+/*
+	if(checkNetConnection()==true){
+	alert("anda terhubung ke internet");
+	}else if(checkNetConnection()==false){
+	alert("anda tidak terhubung ke internet, silahkan check koneksi anda!");
+	
+	}*/
+	//alert(checkNetConnection());
+	if(checkNetConnection()==true){
+	alert("Koneksi internet gagal");
+	}else{
+	alert("Kami sendang menghubungkan dengan facebook harap tunggu");
+	}
+});
+</script>			
